@@ -1,0 +1,7 @@
+<form action="" (ngSubmit)="onSubmit()" #f="ngForm">
+    <label for="" class="form-label">Add:</label>
+    <input type="text" class="form-control" ngModel required placeholder="Add product" #product="ngModel">
+    <input type="submit" value="Add product" id="" class="btn btn-primary">
+    <span *ngIf="!product.valid && product.touched" class="help-block">
+        Please enter valid product</span>
+</form>

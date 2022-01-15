@@ -1,27 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {FormsModule} from "@angular/forms";
 import { AppComponent } from './app.component';
-import {HeaderComponent} from "./header/header.component";
-import {MainmenuComponent} from "./mainmenu/mainmenu.component";
-import {SidebarComponent} from "./sidebar/sidebar.component";
-import {RouterModule, Routes} from "@angular/router";
-import {HomeComponent} from "./home/home.component";
-import {CategoryComponent} from "./category/category.component";
+// import {HttpClientModule} from "@angular/common/http";
+import { AddProductComponent } from './add-product/add-product.component';
+import { ListComponent } from './list/list.component';
 
-const appRoutes: Routes = [
-  {path:"",component:HomeComponent},
-  {path:"category",component:CategoryComponent}
-];
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,MainmenuComponent,SidebarComponent,
-    HomeComponent,CategoryComponent
+    AddProductComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
